@@ -1,14 +1,173 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Expense Calculator</title>
-    <link rel="stylesheet" href="index.css">
+  <title>Saylani Walfare Trust - PK</title>
+  <link rel="icon" href="https://saylani-welfare-uk.netlify.app/images.png" type="image/x-icon">
+  <link rel="stylesheet" href="Saylani.css" type="text/css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+
 </head>
+
 <body>
-    <h1>Javascript Expense Calculator</h1>
-    
-    <script src="index.js"></script>
-</body>
-</html>
+  <div class="header">
+    <div class="ABH">
+      <div class="navMail">
+        <p>✉ &nbsp;info@SaylaniWelfareUSA.com &nbsp;&nbsp;&nbsp;&nbsp;✆&nbsp;833-786-0999 </p>
+      </div>
+      <div class="lang-menu">
+        <div class="selected-lang">
+          English
+        </div>
+        <ul>
+          <li>
+            <a href="#" class="pk">Urdu</a>
+          </li>
+          <li>
+            <a href="#" class="ae">Arabic</a>
+          </li>
+          <li>
+            <a href="#" class="tr">Turkey</a>
+          </li>
+        </ul>
+      </div>
+      <div class="blank"></div>
+    </div>
+    <div class="navBar">
+      <div class="navLogo">
+        <span>
+          <img src="data:image/jpeg;base64,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" width="190px" height="55px">
+        </span>
+      </div>
+      <div class="navOptions">
+        <ul>
+          <li><a style="color: rgb(56, 54, 54);" class="home" href="#">Home</a></li>
+          <li><a class="about">About</a></li>
+          <li><a class="services">Services</a></li>
+          <li><a class="media">Media</a></li>
+          <li><a class="news">News</a></li>
+          <li><a class="contact us">Contact us</a></li>
+          <li><a class="bank">Bank Details</a></li>
+          <li><a class="donate">DONATE NOW</a></li>
+          <li><a class="sponsor">BE A SPONSOR</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="front">
+      <div class="welcome" style="font-family: 'Poppins';font-size: 22px;">
+        <h1>Welcome to the <br> <a class="saylani">Saylani</a> Welfare</h1>
+        <h3>The largest NGO offering free <a class="more"> healthcare <br> and lot more.</a></h3>
+        <p>Saylani Welfare is on the ground and already working with local
+          communities to assess how best to support underprivileged families
+          <br> in more than 63 areas of day to day lives.
+        </p>
+        <button class="btn">Explorer More →</button>
+      </div>
+      <div class="image">
+        <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646926708/website-images/static/38.png" width="500px" height="500px">
+      </div>
+    </div>
+    <div class="general">
+      <div class="main">
+        <p style="text-align: center;">General</p>
+        <p style="font-size: large;" class="dollar">$</p>
+      </div>
+      <div style="text-align: center;" class="blood"><b>Blood Bank / Thalassemia Treatment</b></div>
+      <div style="text-align: center;" class="family"><b>Family Kifalat</b></div>
+      <div style="text-align: center;" class="medical"><b>Medical</b></div>
+      <div style="text-align: center;" class="food"><b>Food</b></div>
+      <div class="quick">Quick Donate</div>
+    </div>
+
+    <div class="img">
+      <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1689136368/website-images/dynamic/95f11c54-b518-4d7f-8d24-b280acc914ef.jpg" alt="Saylani Walfare" height="625" width="1110">
+    </div>
+
+    <p>
+    <h1 style="text-align: center;" class="what">What We Are Doing</h1>
+    </p>
+
+    <div class="container">
+
+      <div class="col1">
+        <img src="	https://res.cloudinary.com/saylani-welfare/image/upload/v1646927889/website-images/static/44.png">
+        <span><b>Welfare</b></span>
+      </div>
+      <div class="col2">
+        <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646927857/website-images/static/41.png">
+        <span><b>Medical</b></span>
+      </div>
+      <div class="col3">
+        <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646927849/website-images/static/39.png">
+        <span><b>Online Sadqah</b></span>
+      </div>
+      <div class="col4">
+        <img src="	https://res.cloudinary.com/saylani-welfare/image/upload/v1646927853/website-images/static/40.png">
+        <span><b>RO Plant</b></span>
+      </div>
+      <div class="col5">
+        <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646927923/website-images/static/48.png">
+        <span><b>Education</b></span>
+      </div>
+      <div class="col6">
+        <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646927876/website-images/static/43.png">
+        <span><b>Food</b></span>
+      </div>
+    </div>
+
+    <div class="fund">
+      <div class="filter">
+        <h5>RO Water Filter Plant</h5>
+        <button>Donate</button>
+          <img src="image (6).jpg"
+        width="350px" height="300px" style="border-radius: 10px;">
+      </div>
+      <div class="courses">
+        <h5>IT Entrepreneurship Courses</h5>
+        <button>Donate</button>
+        <img src="image (8).jpg"
+          width="350px" height="300px" style="border-radius: 10px;">
+      </div>
+      <div class="zakat">
+        <h5>Zakat</h5>
+        <button>Donate</button>
+        <img src="image (7).jpg"
+          width="350px" height="300px" style="border-radius: 10px;">
+      </div>
+    </div>
+
+<footer class="footer">
+
+  <div class="wave">
+    <div class="copy"><p>Copyright &copy; 2023 by Saylani Walfare Int Trust</p></div>
+    <div class="divider">_________________________________________________________________________________________________________________________________</div>
+    <img src="https://www.saylaniwelfareusa.com/static/media/upcoming_background.a669f19ea2aee3c7e10f.png" alt="">
+  </div>
+  <div class="loog">
+    <img src="https://www.saylaniwelfareusa.com/static/media/logo_saylaniwelfareusa.22bf709605809177256c.png" alt="">
+  </div>
+  <div class="face">
+    <img src="Facebook.png"></div>
+  <div class="twit"> 
+    <img src="Twitter.jpg"></div>
+  <div class="yout">
+    <img src="Youtube.png"></div>
+  <div class="ab">
+    <span><h2>About</h2> <p>Introduction</p><p>Chairman message</p></span>
+  <div class="access">
+    <span><h2>Explore</h2> <p>News</p><p>Media</p><p>Contact</p><p>Donation</p></span>
+  <div class="tax">
+    <span><h2>Contact</h2> <p>1 E Erie St STE 525-2783 Chicago,</p><p>IL 60611</p>
+    <p>Email:info@SaylaniWelfareUSA.com</p><p style="color: #1890ff;">Call: 833-786-0999</p>
+    <p>Tax ID: 88-3709826</p><p>Muhammed Haris</p> </span>
+  </div>
+
+</footer>
+
+
+    </body>
+    </html>
+  
