@@ -7,21 +7,51 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>JavaScript Expense Calculator Application</h1>
+    <h2>Expense Calculator Application</h2>
 
-<div class="container">
+    <div class="container">
+        <h4>Your Balance</h4>
+        <h1 id="balance">Rs0.00</h1>
+        <div class="inc-exp-pro-container">
+            <div>
+                <h4>Income</h4>
+                <p id="plus">
+                    Rs0.00
+                </p>
+            </div>
+            <div>
+                <h4>Expense</h4>
+                <p id="minus">
+                    Rs0.00
+                </p>
+            </div>
+            <div class="pro">
+                <h4>Profit / Loss</h4>
+                <p id="loss">
+                    Rs0.00
+                </p>
+            </div>
+        </div>
 
- <div class="income"><h3>Income</h3><h3>0</h3></div>
- <div class="expense"><h3>Expense</h3><h3>0</h3></div>
- <div class="profit"><h3>Profit Loss</h3><h3>0</h3></div>
-
-</div>
-<div id="button">
-<div> <input id="input" type="number" placeholder="amount" /></div>
-<button class="incme" onclick="income()">Income</button>
-<button class="expns" onclick="expense()">Expense</button>
-</div>
+        <h3>Add New Transition</h3>
+        <form id="form">
+            <div class="form-control">
+                <label id="Amount">Amount</label>
+                <input type="number" class ="amount" placeholder="Enter Amount...">
+            </div>
+            <div class="transaction">
+            <button type="button" class="btn1">Income</button>
+            <button type="button" class="btn2">Expense</button>
+            </div>
+        </form>
+    </div>
 
     <script src="index.js"></script>
 </body>
 </html>
+
+
+
+
+
+
