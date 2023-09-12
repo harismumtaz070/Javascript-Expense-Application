@@ -1,4 +1,3 @@
-// Get DOM elements
 const balanceElement = document.getElementById("balance");
 const incomeElement = document.getElementById("plus");
 const expenseElement = document.getElementById("minus");
@@ -12,7 +11,7 @@ let income = 0;
 let expense = 0;
 
 // Function to update the display
-function updateDisplay() {
+function updatetext() {
     balanceElement.textContent = "Rs" + balance.toFixed(2);
     incomeElement.textContent = "Rs" + income.toFixed(2);
     expenseElement.textContent = "Rs" + expense.toFixed(2);
@@ -22,24 +21,25 @@ function updateDisplay() {
 }
 
 // Function to handle income button click
-incomeButton.addEventListener("click", function () {
+
+incomeButton.addEventListener("click",
+function () {
     const amount = parseFloat(amountInput.value);
     if (!isNaN(amount) && amount > 0) {
         income += amount;
         balance += amount;
-        updateDisplay();
+        updatetext();
         descriptionInput.value = "";
         amountInput.value = "";
     }
 });
-
 // Function to handle expense button click
 expenseButton.addEventListener("click", function () {
     const amount = parseFloat(amountInput.value);
     if (!isNaN(amount) && amount > 0) {
         expense += amount;
         balance -= amount;
-        updateDisplay();
+        updatetext();
         descriptionInput.value = "";
         amountInput.value = "";
     }
